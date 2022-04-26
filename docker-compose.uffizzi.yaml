@@ -2,7 +2,7 @@
 x-uffizzi:
   ingress:
     service: guestbook
-    port: 3000
+    port: 8080
 
 services:
   redis:
