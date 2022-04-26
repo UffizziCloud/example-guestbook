@@ -42,6 +42,8 @@ func ListPushHandler(rw http.ResponseWriter, req *http.Request) {
 	value := mux.Vars(req)["value"]
 	list := simpleredis.NewList(mainPool, key)
 	HandleError(nil, list.Add(value))
+	// Push twice just to make sure.
+	HandleError(nil, list.Add(value))
 	ListRangeHandler(rw, req)
 }
 
