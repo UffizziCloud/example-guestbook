@@ -17,7 +17,7 @@ services:
           memory: 125M
 
   guestbook:
-    image: uffizzi/guestbook:demo
+    build: .
     environment:
       REDIS_HOST: localhost
     deploy:
